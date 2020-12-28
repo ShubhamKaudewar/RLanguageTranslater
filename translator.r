@@ -1,33 +1,31 @@
 library(reticulate)
-py_install("googletrans")
+source_python("pyfn.py")
 translator <- Translator()
 
-library(hash)
-language <- hash()
+language <- list("bn"="Bangla",
+          "bn"="Bangla",
+          "en"="English",
+          "ko"="Koren",
+          "fr"="French",
+          "de"="German",
+          "he"="Hebrew",
+          "hi"="Hindi",
+          "it"="Italian",
+          "ja"="Japanese",
+          "ls"="Latin",
+          "ms"="Malay",
+          "ne"="Nepali",
+          "ru"="Russian",
+          "ar"="Arabic",
+          "zh"="Chinese",
+          "es"="Spanish")
 
-language[["bn"]] <- "Bangla"
-language[["en"]] <- "English"
-language[["ko"]] <- "Koren"
-language[["fr"]] <- "French"
-language[["de"]] <- "German"
-language[["he"]] <- "Hebrew"
-language[["hi"]] <- "Hindi"
-language[["it"]] <- "Italian"
-language[["ja"]] <- "Japanese"
-language[["ls"]] <- "Latin"
-language[["ms"]] <- "Malay"
-language[["ne"]] <- "Nepali"
-language[["ru"]] <- "Russian"
-language[["ar"]] <- "Arabic"
-language[["zh"]] <- "Chinese"
-language[["es"]] <- "Spanish"
-
-allow <- True
+allow <- TRUE
 
 while (allow)
-    user_code <- readline(prompt = "enter 'options' \n");
+    user_code=readline(prompt="Enter 'options':")
     if (user_code == "options"){
-        print("Code : Language")
+        print(language)
         for (i in language.items())
             print("{i[0]} => {i[1]}")
         print()
@@ -35,12 +33,12 @@ while (allow)
         for (lan_code in language.keys())
             if (lan_code == user_code)
                 print("You have selected {language[lan_code]}")
-                allow <- False
+                allow <- FALSE
         if (allow)
             print("It's not a valid language code!")
         }
-while (True)
-    string <- input("\nWrite the text you want to translate: \nTo exit the program write 'close'\n")
+while (TRUE)
+    string=readline(prompt = "\nWrite the text you want to translate: \nTo exit the program write 'close'\n")
     if (string == "close")
         print("\nHave a nice Day!")
         break
@@ -53,3 +51,5 @@ while (True)
     for (i in language.items())
         if (translated.src == i[0])
             print("Translated from : {i[1]}")
+
+    
