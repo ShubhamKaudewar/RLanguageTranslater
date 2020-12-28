@@ -1,24 +1,26 @@
-from googletrans import Translator
-
+library(reticulate)
+py_install("googletrans")
 translator <- Translator()
 
-language <- {"bn": "Bangla",
-            "en": "English",
-            "ko": "Koren",
-            "fr": "French",
-            "de": "German",
-            "he": "Hebrew",
-            "hi": "Hindi",
-            "it": "Italian",
-            "ja": "Japanese",
-            'la': "Latin",
-            "ms": "Malay",
-            "ne": "Nepali",
-            "ru": "Russian",
-            "ar": "Arabic",
-            "zh": "Chinese",
-            "es": "Spanish"
-            }
+library(hash)
+language <- hash()
+
+language[["bn"]] <- "Bangla"
+language[["en"]] <- "English"
+language[["ko"]] <- "Koren"
+language[["fr"]] <- "French"
+language[["de"]] <- "German"
+language[["he"]] <- "Hebrew"
+language[["hi"]] <- "Hindi"
+language[["it"]] <- "Italian"
+language[["ja"]] <- "Japanese"
+language[["ls"]] <- "Latin"
+language[["ms"]] <- "Malay"
+language[["ne"]] <- "Nepali"
+language[["ru"]] <- "Russian"
+language[["ar"]] <- "Arabic"
+language[["zh"]] <- "Chinese"
+language[["es"]] <- "Spanish"
 
 allow <- True
 
