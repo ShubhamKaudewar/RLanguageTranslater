@@ -1,1 +1,1 @@
-Sys.setenv(RETICULATE_PYTHON="C:/Users/Shubham/AppData/Local/Programs/Python/Python38-32/python.exe")
+Sys.setenv(RETICULATE_PYTHON="C:/python/python391/python.exe")
