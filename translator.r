@@ -25,10 +25,9 @@ allow <- TRUE
 while (allow)
     user_code=readline(prompt="Enter 'options':")
     if (user_code == "options"){
-        print(language)
-        for (i in language.items())
-            print("{i[0]} => {i[1]}")
-        print()
+        print("Code: language")
+        for (each in language)
+            print(each[key],each[value])
         } else {
         for (lan_code in language.keys())
             if (lan_code == user_code)

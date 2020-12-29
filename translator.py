@@ -1,7 +1,5 @@
 from googletrans import Translator
-
 translator = Translator()
-
 language = {"bn": "Bangla",
             "en": "English",
             "ko": "Koren",
