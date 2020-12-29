@@ -52,3 +52,6 @@ while True:  # starting translation loop
     for i in language.items():  # checking if the source language is listed on language dict and printing it
         if translated.src == i[0]:
             print(f"Translated from : {i[1]}")
+
+
+# This is amol's commit
